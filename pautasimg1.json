@@ -1,0 +1,12 @@
+{
+  "pauta1" : {
+      "id" : "id0",
+    "idname" : "biologiacelumol",
+    "title":"Biologia Celular y Molecular",
+    "img" : "img/libros/biologiacelumol.jpg",
+    "pg" : "img/pauta1.jpg"
+    }
+
+
+
+}
