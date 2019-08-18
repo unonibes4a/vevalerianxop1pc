@@ -625,13 +625,29 @@ height: 80%;
 background-color: #751313;
 
 }
-
+#iddivabajopuiblicar{
+  position: absolute;
+top: 90%;
+left:70%;
+width:30%;
+height: 10%;
+background-color: #000000;
+}
 
 </style>  <script src="jquery-3.2.1.min.js" ></script>
 </head>
 <body onresize="fonresize();" onload="fonload();">
 
+    <div id="iddivabajopuiblicar">
 
+        <audio id="myAudio">
+        
+            <source src="apublicar1.mp3" type="audio/mpeg">
+          
+          </audio>
+          
+    </div>
+    
 
 
   <p id="idmensajep">ok</p>
@@ -641,6 +657,15 @@ background-color: #751313;
 
 
 
+var x = document.getElementById("myAudio"); 
+playAudio();
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
 function traejsonimgpautas1(){
 
 $.ajax({              
@@ -666,13 +691,13 @@ $.ajax({
 
            }
    });
-
+   playAudio();
 
    setTimeout(function(){
 
 document.getElementById("idimepautas").style.display="none";
-
-},4000);
+playAudio();
+},200);
 
 
 
@@ -692,7 +717,7 @@ $.ajax({
            cache:false,
            success:  function (data) {
        
-       
+          
             for(var i in data){
             //  arraylibros.push({id:data[i].id,idname:data[i].idname,img:data[i].img,pg:data[i].pg,title:data[i].title})
    
@@ -708,9 +733,8 @@ $.ajax({
 setTimeout(function(){
 
   document.getElementById("idmensajep").style.display="none";
-
-},7000);
-
+ 
+},20000);
 
 
            }
@@ -721,7 +745,7 @@ setTimeout(function(){
 
 document.getElementById("idimepautas").style.display="none";
 
-},4000);
+},300);
 
 
 
@@ -729,9 +753,6 @@ document.getElementById("idimepautas").style.display="none";
 
 traejsonmsnactualizacion();
 traejsonimgpautas1();
-
-
-
 
 </script>
   <img  id="idimepautas" src="img/pauta1.jpg" alt="">
@@ -886,7 +907,6 @@ traejsonimgpautas1();
 
 
 <p id="idpdesarroladopor" >ing: Giovanni Rodriguez DIaz</p>
-
 
 
 
