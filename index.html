@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
         * {
           box-sizing: border-box;
@@ -388,12 +388,7 @@ opacity: 0.3;
       }
 
       .idiframemivideo{
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
+  
       }
 #idocultaeso2{
 position: absolute;
@@ -473,9 +468,165 @@ text-align: center;
   font-size: 16px;
 
   color: #0688fa;
-  background-color: #000000;
+  background-color: #751313;
   text-align: center;
 }
+
+#idcursospanel1{
+
+position: absolute;
+top: 0%;
+left: 0%;
+width: 100%;
+height: 100%;
+
+  z-index: 122; 
+  background-color: #893591;
+
+
+
+}
+
+
+#idbtcursosbt1{
+  position: absolute;
+top: 40%;
+left:28%;
+width: 50px;
+height: 50px;
+
+  z-index: 1; 
+  background-color: #000000;
+  color: #ffffff;
+font-size: 10px;
+text-align: center;
+border: 5px outset #1C6EA4;
+border-radius: 40px 40px 40px 40px;
+
+}
+#idbtcursosbt2{
+  position: absolute;
+  top: 40%;
+left:62%;
+width:  50px;
+height: 50px;
+
+  z-index: 1; 
+  background-color: #000000;
+color: #ffffff;
+font-size: 10px;
+text-align: center;
+
+border: 5px outset #1C6EA4;
+border-radius: 40px 40px 40px 40px;
+
+}
+
+#idbtcursosbt0{
+  position: absolute;
+  top: 10%;
+left:28%;
+width:  50px;
+height: 50px;
+
+  z-index: 2; 
+  background-color: #0497f8;
+color: #ffffff;
+font-size: 10px;
+text-align: center;
+
+border: 5px outset #1C6EA4;
+border-radius: 40px 40px 40px 40px;
+
+}
+
+.flex-containercursos {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: DodgerBlue;
+  overflow-y: scroll;
+}
+.flex-containercursos > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+#idflex-containercursos{
+
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 90%;
+}
+
+
+
+.diclass{
+
+
+width:100px;
+height: 100px; 
+
+}
+
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+.cldivcursos{
+position: absolute;
+top: 10%;
+left: 10%;
+width: 80%;
+height: 80%;
+background-color: #751313;
+
+}
+
+
 </style>  <script src="jquery-3.2.1.min.js" ></script>
 </head>
 <body onresize="fonresize();" onload="fonload();">
@@ -722,6 +873,7 @@ traejsonimgpautas1();
   <a onclick="fvermenuseries();"  href="#">Series</a>
   <a onclick="fvermenujuegos();"  href="#">Juegos</a>
   <a onclick="fvermenulibros();" href="#">Libros</a>
+  <a onclick="fmostraridpdescursos();" href="#">Cursos</a>
   <a onclick="mostraridpdesarroladopor();" href="#">Contact</a>
 </div>
 
@@ -734,7 +886,20 @@ traejsonimgpautas1();
 
 
 <p id="idpdesarroladopor" >ing: Giovanni Rodriguez DIaz</p>
+
+
+
+
+
+
 <script>
+ var cambiaaltopantaala=1.777777778;
+    
+function fmostraridpdescursos(){
+
+
+ document.getElementById("idcursospanel1").style.display="flex";
+}
 var bolmostraridpdesarroladopo=true;
 function mostraridpdesarroladopor(){
 if(bolmostraridpdesarroladopo){
@@ -775,12 +940,16 @@ var vlp=0.0;
         var vh=window.innerHeight;
      
 function fonresize(){
+
      vw=window.innerWidth;
      vh=window.innerHeight;
+
+     
      document.getElementById("idtodoelmundo").style.height=String(vh*vhp)+"px";
     document.getElementById("idtodoelmundo").style.width=String(vw*vwp)+"px";
     document.getElementById("idtodoelmundo").style.left=String(vw*vlp)+"px";
-    dodnevaelvideo()
+    dodnevaelvideo();
+  //  alert(vw);
 }
 function iniciunoves(){
  vw=window.innerWidth;
@@ -1394,7 +1563,7 @@ ocultardiv("idponertodo");
 
 function  dodnevaelvideo(){
     vw=window.innerWidth;
-  vh=window.innerHeight;
+  vh=window.innerHeight;/*
 if(vw>5000<=6250){
 
     document.getElementById("idponertodo").style.height=String(vh*0.8)+"px";
@@ -1420,15 +1589,74 @@ document.getElementById("idponertodo").style.left=String(vw*0.15)+"px";
 document.getElementById("idponertodo").style.top=String(vh*0.000051)+"px";
 
 }
+*/
+
+if(vw>vh){
+  cambiaaltopantaala=1.777777778;
+  document.getElementById("idponertodo").style.position="absolute";
+  document.getElementById("idponertodo").style.left=String((vw*(1-(cambiaaltopantaala*vh/vw)))/2)+"px";
+document.getElementById("idponertodo").style.top=String((vh*(1-(1/cambiaaltopantaala*vw/vh)))/2)+"px";
+document.getElementById("idponertodo").style.height=String(((1/cambiaaltopantaala*vw)))+"px";
+document.getElementById("idponertodo").style.width=String(cambiaaltopantaala*vh)+"px";
+/*
+document.getElementById("idponertodo").style.position="absolute";
+  document.getElementById("idponertodo").style.left=String(0)+"px";
+document.getElementById("idponertodo").style.top=String(0)+"px";
+document.getElementById("idpeliculasvisor").style.height=document.getElementById("idponertodo").style.height;
+document.getElementById("idpeliculasvisor").style.width=document.getElementById("idponertodo").style.width;
+
+
+*/
 }
 
 
-openNav();
+if(vw<=vh){
 
+  cambiaaltopantaala=1.801886792;
+  document.getElementById("idponertodo").style.position="absolute";
+  document.getElementById("idponertodo").style.left=String(0)+"px";
+document.getElementById("idponertodo").style.top=String((vh*(1-((1/cambiaaltopantaala*vw))/vh))/2)+"px";
+
+
+
+document.getElementById("idponertodo").style.height=String(((1/cambiaaltopantaala*vw)))+"px";
+document.getElementById("idponertodo").style.width=String(vw)+"px";
+
+/*
+
+document.getElementById("idpeliculasvisor").style.position="absolute";
+document.getElementById("idpeliculasvisor").style.left=String(vw*(1-(cambiaaltopantaala*vh/vw)))+"px";
+  document.getElementById("idpeliculasvisor").style.top=String((vh*((1-(1/cambiaaltopantaala*vw/vh))))/2)+"px";
+
+
+document.getElementById("idpeliculasvisor").style.height=String(168)+"px";
+document.getElementById("idpeliculasvisor").style.width=String(cambiaaltopantaala*((1/cambiaaltopantaala*vw)))+"px";
+alert(((1/cambiaaltopantaala*vw))+"  "+ cambiaaltopantaala*((1/cambiaaltopantaala*vw))+"   "+ document.getElementById("idponertodo").style.width);
+*/
+}
+
+
+
+
+
+
+
+}
+
+fonresize();
+openNav();
 </script>
 
 
 
+
+
+
+
   </div> 
+
+
+  
+
 </body>
 </html> 
