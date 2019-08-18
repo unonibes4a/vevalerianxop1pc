@@ -906,7 +906,7 @@ traejsonimgpautas1();
 
 
 
-<p id="idpdesarroladopor" >ing: Giovanni Rodriguez DIaz</p>
+<p id="idpdesarroladopor" >ing: Giovanni Rodriguez Diaz</p>
 
 
 
@@ -925,11 +925,18 @@ function mostraridpdesarroladopor(){
 if(bolmostraridpdesarroladopo){
   bolmostraridpdesarroladopo=false;
   document.getElementById("idpdesarroladopor").style.display="block";
+  document.getElementById("idmensajep").style.display="block";
+  setTimeout(function(){
+
+document.getElementById("idmensajep").style.display="none";
+
+},20000);
+  playAudio();
   setTimeout(function(){
     bolmostraridpdesarroladopo=true;
     document.getElementById("idpdesarroladopor").style.display="none";
 
-  },3000);
+  },20000);
 }
  
 
