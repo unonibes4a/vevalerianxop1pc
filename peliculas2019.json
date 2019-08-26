@@ -696,6 +696,18 @@
 
 ,
 
+
+"Glass2" : {
+  "vid":"1",
+  "id" : "id11",
+"idname" : "Glass2",
+"title":"Glass (2019)",
+"img" : "https://static.pelisplus.co/movie/cover/original/310f20a72cf82abecd1606aa0c5aa26f.jpg",
+"pg" : "https://www.youtube.com/watch?v=z7F0g6JbYgM"
+}
+,
+
+
 "partidos3" : {
   "vid":"1",
   "id" : "id11",
