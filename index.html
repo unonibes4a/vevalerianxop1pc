@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
         * {
@@ -125,6 +126,15 @@ display: flex;
 	align-content: center;
 
 }
+
+
+
+
+
+
+
+
+
 
 #idabremenu1{
     position: absolute;
@@ -634,6 +644,182 @@ height: 10%;
 background-color: #000000;
 }
 
+
+
+#idpalabraclave{
+position: absolute;
+top: 0%;
+left: 0%;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+width: 100%;
+height: 100%;
+background-color: #000000;
+
+z-index: 144;
+opacity: 0.85;
+}
+
+
+#idinputpalabraclave{
+
+  border: 5px solid #1C6EA4;
+border-radius: 40px 40px 40px 40px;
+}
+
+
+#idbtpalabraclave {
+	-moz-box-shadow:inset 0px -3px 7px 0px #29bbff;
+	-webkit-box-shadow:inset 0px -3px 7px 0px #29bbff;
+	box-shadow:inset 0px -3px 7px 0px #29bbff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2dabf9), color-stop(1, #0688fa));
+	background:-moz-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+	background:-webkit-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+	background:-o-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+	background:-ms-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2dabf9', endColorstr='#0688fa',GradientType=0);
+	background-color:#2dabf9;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #0b0e07;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+#idbtpalabraclave:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0688fa), color-stop(1, #2dabf9));
+	background:-moz-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+	background:-webkit-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+	background:-o-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+	background:-ms-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0688fa', endColorstr='#2dabf9',GradientType=0);
+	background-color:#0688fa;
+}
+#idbtpalabraclave:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+
+
+
+
+.at-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.at-item {
+
+ 
+  background-color:#ffe672;
+  animation-name: angry-animation;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+@keyframes angry-animation {
+  0%{
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+  100%{
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0deg);
+  }
+}
+
+
+
+
+
+
+#idseleccursos{
+
+
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #1C6EA4;
+  z-index: 145;
+}
+
+
+#idimgseleccursos{
+
+position: absolute;
+top: 0%;
+left: 0%;
+width: 100%;
+height: 100%;
+z-index:1;
+}
+
+
+#idvideoscursos{
+
+  position: absolute;
+top: 0%;
+left: 0%;
+width: 100%;
+height: 100%;
+z-index: 2;
+background-color: #ffffff;
+opacity: 0.7;
+display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+overflow-y: scroll;
+}
+
+
+.divideosc{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+width: 200px;
+height: 100px;
+background-color: #0b0e07;
+
+color: #ffffff;
+font-size: 14px;
+text-align: center
+
+
+}
+
+
+
+
+
+
 </style>  <script src="jquery-3.2.1.min.js" ></script>
 </head>
 <body onresize="fonresize();" onload="fonload();">
@@ -894,7 +1080,7 @@ traejsonimgpautas1();
   <a onclick="fvermenuseries();"  href="#">Series</a>
   <a onclick="fvermenujuegos();"  href="#">Juegos</a>
   <a onclick="fvermenulibros();" href="#">Libros</a>
-  <a onclick="fmostraridpdescursos();" href="#">Cursos</a>
+  <a onclick="vermunucursos();" href="#">Cursos</a>
   <a onclick="mostraridpdesarroladopor();" href="#">Contact</a>
   
 </div>
@@ -909,9 +1095,32 @@ traejsonimgpautas1();
 
 <p id="idpdesarroladopor" >ing: Giovanni Rodriguez Diaz</p>
 
+<div id="idpalabraclave">
+
+<input value="" placeholder="palabra clave" id="idinputpalabraclave" type="text">
+<button onclick="vermenuselecursosd();" class="at-item" id="idbtpalabraclave">btok</button>
+<button id=""></button>
+</div>
+
+<div id="idseleccursos">
+
+<img id="idimgseleccursos" src="https://media.giphy.com/media/GhYSk8NQ6o6iI/giphy.gif" alt="">
+<div id="idvideoscursos">
 
 
+<div class="divclasscursosvideo">
 
+
+</div>
+
+  
+<div onclick="fidvc1();" class="divideosc">Video 1</div>
+  <div onclick="fidvc2();" class="divideosc">Video 2</div>
+  <div onclick="fidvc3();" class="divideosc">Video 3</div>
+    
+
+</div>
+</div>
 
 <script>
  var cambiaaltopantaala=1.777777778;
@@ -1447,6 +1656,7 @@ vtempestajuegossidname=thiss.id;
             if(arrayJuegos[i].idname==vtempestajuegossidname){
             //   console.log(i+"    "+ vtempestapeliculaidname+"    "+ arraypeliculas2019[i].idname);
              pasarleeliframepeliculas(arrayJuegos[i].pg);
+             alert(arrayJuegos[i].pg)
             }
         }
     }
@@ -1673,6 +1883,83 @@ alert(((1/cambiaaltopantaala*vw))+"  "+ cambiaaltopantaala*((1/cambiaaltopantaal
 
 fonresize();
 openNav();
+
+var stv1="";
+
+function fidvc1(){
+
+  document.getElementById("idseleccursos").style.display="none";
+  document.getElementById("idpalabraclave").style.display="none";
+  
+  focultarmenunave();
+focultarmenupeliculas();
+stv1="https://drive.google.com/file/d/1fqZKzBNYGEUfNbsQAtEe1Ni-WnDvP3Hc/preview";
+  pasarleeliframepeliculas(stv1);
+ 
+}
+
+
+
+function fidvc2(){
+  document.getElementById("idseleccursos").style.display="none";
+  document.getElementById("idpalabraclave").style.display="none";
+  
+  focultarmenunave();
+focultarmenupeliculas();
+stv1="https://drive.google.com/file/d/1yYB5n2N5DIMUoLm0NJd3KAyTXUSv9tzK/preview";
+  pasarleeliframepeliculas(stv1);
+}
+
+function fidvc3(){
+  document.getElementById("idseleccursos").style.display="none";
+  document.getElementById("idpalabraclave").style.display="none";
+  
+  focultarmenunave();
+focultarmenupeliculas();
+stv1="https://drive.google.com/file/d/1ofiUYUzq8E4E-q0WjdPk0EFr-TQVzHhk/preview";
+
+
+ pasarleeliframepeliculas(stv1);
+}
+
+
+function vermunucursos(){
+
+
+  
+  document.getElementById("idseleccursos").style.display="none";
+  document.getElementById("idpalabraclave").style.display="flex";
+
+
+}
+var stvalorcurosinput="";
+function vermenuselecursosd(){
+  stvalorcurosinput=document.getElementById("idinputpalabraclave").value;
+if(stvalorcurosinput=="mininterior"){
+  
+  document.getElementById("idseleccursos").style.display="flex";
+  document.getElementById("idpalabraclave").style.display="flex";
+}
+else{
+
+    
+  document.getElementById("idseleccursos").style.display="none";
+  document.getElementById("idpalabraclave").style.display="none";
+stv1="https://media.giphy.com/media/GhYSk8NQ6o6iI/giphy.gif"; 
+  pasarleeliframepeliculas(stv1);
+}
+
+
+
+
+
+
+}
+
+
+document.getElementById("idseleccursos").style.display="none";
+  document.getElementById("idpalabraclave").style.display="none";
+
 </script>
 
 
@@ -1688,3 +1975,6 @@ openNav();
 
 </body>
 </html> 
+
+
+
