@@ -1,8 +1,25 @@
 {
 
 
+  "BillarBlitz" : {
+    "id" : "id9",
+  "idname" : "BillarBlitz",
+  "title":"Billar Blitz Challenge <br>  Android > 4  PC",
+  "img" : "https://img.cdn.famobi.com/portal/html5games/images/tmp/BilliardBlitzChallengeTeaser.jpg",
+  "pg" :"https://games.cdn.famobi.com/html5games/b/billiard-blitz-challenge/v390/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=e72de216-92b4-4efc-a2b9-8318e819139b&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=876&original_ref=https%3A%2F%2Fgames.famobi.com%2Fsports%2Fbilliard-blitz-challenge%3Ftechnology%3Dweb"
+  }
+  ,
 
 
+  
+  "BallBilliards8" : {
+    "id" : "id9",
+  "idname" : "BallBilliards8",
+  "title":"8 Ball Billiards Classic <br>  Android > 4  PC",
+  "img" : "https://img.cdn.famobi.com/portal/html5games/images/tmp/8BallBilliardsClassicTeaser.jpg",
+  "pg" :"https://games.cdn.famobi.com/html5games/0/8-ball-billiards-classic/v120/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=82038e98-d4e1-46dd-8de9-1460d1395eab&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=880&original_ref=https%3A%2F%2Fgames.famobi.com%2Fsports%2F8-ball-billiards-classic%3Ftechnology%3Dweb"
+}
+  ,
 
 
   "BurninRubber" : {
@@ -551,10 +568,12 @@
 
 
 
-
-
-
 ,
+
+
+
+
+
 
 "BacCandyland" : {
   "id" : "id9",
