@@ -831,6 +831,11 @@ text-align: center
             <source src="apublicar1.mp3" type="audio/mpeg">
           
           </audio>
+          <audio id="myAudiotelevisionvalerian">
+        
+            <source src="TELEVISIONVALERIANX.mp3" type="audio/mpeg">
+          
+          </audio>
           
     </div>
     
@@ -840,6 +845,17 @@ text-align: center
 
 
 <script>
+
+
+var audiotelevisionvale = document.getElementById("myAudiotelevisionvalerian"); 
+
+function playAudiotelevision() { 
+  audiotelevisionvale.play(); 
+} 
+
+function pauseAudiotelevision() { 
+audiotelevisionvale.pause(); 
+} 
 
 
 
@@ -1233,7 +1249,15 @@ fvermenuidcajas1();
 								}
    
 }
+var finaudiotelevision=true;
 function fvermenutelevision(){
+if(finaudiotelevision){  playAudiotelevision();
+setTimeout(function(){
+
+  finaudiotelevision=true;
+},7000);
+}
+
     removerelementoshijos("anadeacapelis");
     removerelementoshijos("anadeacapelis2");
     removerelementoshijos("anadeacapelis3");
