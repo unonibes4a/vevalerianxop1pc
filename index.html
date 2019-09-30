@@ -1079,6 +1079,7 @@ traejsonimgpautas1();
   <a onclick="fvermenupeliculas();" href="#">Peliculas</a>
   <a onclick="fvermenuseries();"  href="#">Series</a>
   <a onclick="fvermenujuegos();"  href="#">Juegos</a>
+  <a onclick="fvermenutelevision();" href="#">Television</a>
   <a onclick="fvermenulibros();" href="#">Libros</a>
   <a onclick="vermunucursos();" href="#">Cursos</a>
   <a onclick="mostraridpdesarroladopor();" href="#">Contact</a>
@@ -1232,7 +1233,24 @@ fvermenuidcajas1();
 								}
    
 }
+function fvermenutelevision(){
+    removerelementoshijos("anadeacapelis");
+    removerelementoshijos("anadeacapelis2");
+    removerelementoshijos("anadeacapelis3");
+    focultarmenunave()
+   // ocultardiv("idabremenu1");
+		ocultardiv("idabremenu1a");
+   // mostrasrdiv("idcajas1");
+fvermenuidcajas1();
 
+    for(var i in arraytelevision2019){
+                           
+      crealoscuadortelevi(arraytelevision2019[i].idname,arraytelevision2019[i].title,arraytelevision2019[i].img);
+
+								}
+
+            
+}
 
 function fvermenulibros(){
     removerelementoshijos("anadeacapelis");
@@ -1490,7 +1508,7 @@ function traejsonpeliculas2019(){
             
 			//	traejsonseries2019();
 
-
+      traejsontelevision2019();
 
 
                }
@@ -1508,7 +1526,41 @@ function traejsonpeliculas2019(){
 
 
 
+var arraytelevision2019=[];
 
+function traejsontelevision2019(){
+
+    $.ajax({              
+               url:   'television2019.json',
+                dataType:  'json',
+               type:  'get',
+               cache:false,
+               success:  function (data) {
+              
+           
+                for(var i in data){
+                  arraytelevision2019.push({id:data[i].id,idname:data[i].idname,img:data[i].img,pg:data[i].pg,title:data[i].title});
+       
+     
+                }
+						
+
+
+
+
+
+
+
+
+               }
+       });
+
+
+
+
+
+
+}
 
 
 
@@ -1557,7 +1609,12 @@ function traejsonseries2019(){
 
 var vtempestapeliculaidname="";
 
+function crealoscuadortelevi(stid,sttitle,sturlimg){
+    escribeppeliculas("television");
 
+$("#anadeacapelis").append("<div onclick="+"onclitelevison(this);"+" id="+String(stid)+"  class='column'><div class='card'><h3>"+String(sttitle)+"</h3><img class='imgp' src="+String(sturlimg)+" alt='Card image cap'></div></div>");
+
+}
 function crealoscuadorpelis(stid,sttitle,sturlimg){
     escribeppeliculas("Peliculas");
 
@@ -1604,6 +1661,26 @@ function crealoscuadroseriesytempvideos(stid,sttitle,sturlimg){
 
 }
 
+
+
+var vtempestatelevisionidname="";
+function onclitelevison(thiss){
+focultarmenunave();
+focultarmenupeliculas();
+
+    vtempestatelevisionidname=thiss.id;
+    if(vtempestatelevisionidname!=""){
+       
+        for(var i in arraytelevision2019){
+            if(arraytelevision2019[i].idname==vtempestatelevisionidname){
+            //   console.log(i+"    "+ vtempestapeliculaidname+"    "+ arraypeliculas2019[i].idname);
+             pasarleeliframepeliculas(arraytelevision2019[i].pg);
+            }
+        }
+    }
+
+
+}
 
 
 
