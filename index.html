@@ -816,7 +816,53 @@ text-align: center
 }
 
 
+#idselecciona{
+position: absolute;
+top: 0%;
+left: 0%;
+height: 100%;
+width: 100%;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
 
+  background-color: #0b0e07;
+
+  z-index: 200;
+}
+#idpmm{
+
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  background-color: #000000;
+  color: #0688fa;
+  z-index: 2001;
+
+}
+
+#buscarconvalerianx{
+
+
+  widows: 30%;
+  height: 25%;
+  background-color: #0b0e07;
+  color: #0688fa;
+  font-size: 17px;
+}
+
+
+#buscarcongoogle{
+
+  widows: 30%;
+  height: 25%;
+  background-color: #0b0e07;
+  color: #0688fa;
+  font-size: 17px;
+}
 
 
 
@@ -2095,7 +2141,43 @@ document.getElementById("idseleccursos").style.display="none";
   </div> 
 
 
+
+  <div id="idselecciona">
+
+
+
+    <div onclick="vervalerianxsi ();"  id="buscarconvalerianx">VALERINX</div>
+    <div onclick="firagoogle ();" id="buscarcongoogle">GOOGLE</div>
+
+  </div>
+  <p id="idpmm">
+
+
+    
+Valerianx  usa  un algoritmo de busqueda  automatica, su contendo no le pertenece  a  valerianx,  esta  alojado en todos  los  servidores del mundo, por lo que la plataforma  solo usa  un algoritmo de búsqueda  automatica, para mostrar  ese  contenido que  encuentra  en otros  sitios virtuales  a tu pc  o celular  
+
+  </p>
+  <SCript>
+
+
+    function vervalerianxsi () {
+      document.getElementById("idselecciona").style.display="none";
+      
+
+      }
+
+
+      function firagoogle () {
+        window.location.href="https://www.google.nl/";
+
+      
+
+      }
+  setTimeout(function(){
+    document.getElementById("idpmm").style.display="none";
+  },3000 );
   
+  </SCript>
 
 </body>
 </html> 
